@@ -1,13 +1,44 @@
 import React from 'react';
-import { Text } from 'react-native';
-
-import { Container } from './styles';
+import { SafeAreaView } from 'react-native';
+import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
+import {
+    Container,
+    ContentHeader,
+    ContentBody,
+    ContentFooter,
+    Title,
+    Description,
+    ViewButton,
+} from './styles';
 
 const Login: React.FC = () => {
     return (
-        <Container>
-            <Text>Scren Login</Text>
-        </Container>
+        <SafeAreaView>
+            <Container>
+
+                <ContentHeader>
+                    <Title>Seja bem vindo(a) {"\n"} Carteira Digital</Title>
+
+                    <Description>Entrar com redes sociais</Description>
+                    <ViewButton>
+
+                        <ButtonSocialGoogle title="Google" />
+                        <ButtonSocialGoogle title="facebook" />
+
+                    </ViewButton>
+                </ContentHeader>
+
+                <ContentBody>
+
+                </ContentBody>
+
+                <ContentFooter>
+
+                </ContentFooter>
+
+            </Container>
+        </SafeAreaView>
+
     )
 }
 
